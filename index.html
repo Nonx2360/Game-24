@@ -4,15 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เกม24</title>
+    <title>Game 24 Solver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>เกม24</h1>
-        <button onclick="generateNumber()">Generate Number</button>
-        <div id="result"></div>
+    <div class="main-container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-calculator"></i>
+                <span>Game 24</span>
+            </div>
+            <p class="subtitle">Can you make 24 from these numbers?</p>
+        </header>
+
+        <main class="game-board">
+            <div class="cards-container" id="cards-container">
+                <div class="card empty">?</div>
+                <div class="card empty">?</div>
+                <div class="card empty">?</div>
+                <div class="card empty">?</div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" onclick="generateNumber()">
+                    <i class="fa-solid fa-rotate"></i> Generate
+                </button>
+                <button class="btn btn-secondary" onclick="showAnswer()" id="solve-btn" disabled>
+                    <i class="fa-solid fa-key"></i> Show Answer
+                </button>
+            </div>
+
+            <div class="result-area" id="result-area">
+                <div class="solution-content" id="result">
+                    Press generate to start looking for 24!
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <a href="https://nonx2360.github.io/About-Me/index.html" target="_blank"
+                style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.4);">
+                Made By Nonx2360
+            </a>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
